@@ -11,7 +11,7 @@ function Register() {
     async function submit(values) {
         try {
             await register(values);
-            history.push('/login');
+            history.push('/register');
         } catch (e) {
             console.log(e);
         }

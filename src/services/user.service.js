@@ -5,9 +5,9 @@ async function register(user) {
     method: "POST",
     body: JSON.stringify(user),
     headers: {
-      "Content-Type": "application/json",
-    },
-  });
+      "Content-Type": "application/json"
+    }
+  })
   return res.json();
 }
 
@@ -32,7 +32,7 @@ async function me() {
     headers: {
       "Content-Type": "application/json",
       "Authorization": token
-    },
+    }
   });
   return res.json();
 }
@@ -64,7 +64,7 @@ async function search(query) {
 }
 
 async function Follow(username) {
-    return await fetch(config.apiUrl + '/user/' + username + '/Follow', {
+    return fetch(config.apiUrl + '/user/' + username + '/Follow', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
